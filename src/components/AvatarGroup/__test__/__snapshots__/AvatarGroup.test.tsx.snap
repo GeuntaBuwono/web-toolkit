@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvatarGroup renders default 1`] = `
+<img
+  alt="expectedAvatarAlt"
+  class="inline-block rounded-full ring-2 ring-white h-10 w-10"
+  src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/160.jpg"
+/>
+`;
+
+exports[`AvatarGroup renders with maxLength 0 1`] = `null`;
+
+exports[`AvatarGroup renders with maxLength 4 1`] = `
+<img
+  alt="expectedAvatarAlt"
+  class="inline-block rounded-full ring-2 ring-white h-8 w-8"
+  src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/160.jpg"
+/>
+`;
+
+exports[`AvatarGroup renders with maxLength MORE or EQUAL with avatars length 1`] = `
+<img
+  alt="expectedAvatarAlt"
+  class="inline-block rounded-full ring-2 ring-white h-8 w-8"
+  src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/160.jpg"
+/>
+`;
+
+exports[`AvatarGroup renders with size 1`] = `
+<img
+  alt="expectedAvatarAlt"
+  class="inline-block rounded-full ring-2 ring-white h-8 w-8"
+  src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/160.jpg"
+/>
+`;
