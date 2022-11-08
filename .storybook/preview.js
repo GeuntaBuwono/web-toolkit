@@ -1,4 +1,6 @@
 import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
+import {withTests} from '@storybook/addon-jest';
+import results from '../.jest-test-results.json';
 
 export const parameters = {
 	actions: {argTypesRegex: '^on[A-Z].*'},
@@ -9,3 +11,9 @@ export const parameters = {
 		},
 	},
 };
+
+export const decorators = [
+	withTests({
+		results,
+	}),
+];

@@ -6,6 +6,7 @@ module.exports = {
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
 		'@storybook/addon-interactions',
+		'@storybook/addon-jest',
 		'@storybook/preset-create-react-app',
 		{
 			name: '@storybook/addon-postcss',
