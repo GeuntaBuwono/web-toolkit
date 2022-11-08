@@ -55,3 +55,16 @@ jobs:
         with:
           node-version: 16
       - run: yarn check:prettier
+  test-coverage:
+    name: Jest coverage report
+    runs-on: ubuntu-latest
+    needs: [test]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ArtiomTr/jest-coverage-report-action@v2
+        id: coverage
+        with:
+          output: report-markdown
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: ${{ steps.coverage.outputs.report }}
