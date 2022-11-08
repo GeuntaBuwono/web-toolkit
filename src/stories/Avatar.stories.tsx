@@ -1,8 +1,9 @@
 import Avatar from '@components/Avatar';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
+import {faker} from '@faker-js/faker';
 
 const avatarWithImageArgs = {
-	src: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/170.jpg',
+	src: faker.image.avatar(),
 };
 
 export default {
