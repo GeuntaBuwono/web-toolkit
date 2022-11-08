@@ -20,7 +20,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"eject": "react-scripts eject",
-		"test:generate-output": "jest --json --outputFile=.jest-test-results.json",
+		"test:generate-output": "jest --json --outputFile=.jest-test-results.json || true",
 		"test": "jest --watchAll=false",
 		"test:coverage": "jest --coverage",
 		"test:snapshot:update": "jest -u",
@@ -34,7 +34,9 @@
 		"format:prettier": "prettier --config .prettierrc . --ignore-path .gitignore --write --loglevel silent",
 		"formatter": "yarn format:lint; yarn format:prettier",
 		"storybook": "start-storybook -p 6006 -s public",
-		"build-storybook": "build-storybook -s public",
+		"prebuild:storybook": "yarn test:generate-output",
+		"build:storybook": "build-storybook -c .storybook -o build/",
+		"predeploy": "yarn build:storybook",
 		"prepare": "husky install"
 	},
 	"lint-staged": {
@@ -61,12 +63,14 @@
 			"^@utils/(.*)$": "<rootDir>/src/utils/$1"
 		},
 		"modulePathIgnorePatterns": [
+			"node_modules",
 			"./src/App.tsx",
 			"./src/App.test.tsx",
 			"./src/index.tsx",
 			"./src/setupTests.ts",
 			"./src/reportWebVitals.ts",
-			"./src/stories/*"
+			"./src/stories/*",
+			"jest-test-results.json'"
 		],
 		"collectCoverageFrom": [
 			"src/**/*.{js,jsx,ts,tsx}",

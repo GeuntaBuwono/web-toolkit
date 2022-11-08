@@ -24,3 +24,4 @@ yarn-error.log*
 
 # Results from @storybook/addon-jest
 .jest-test-results.json
+.vercel
