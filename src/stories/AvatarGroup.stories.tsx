@@ -21,6 +21,12 @@ export default {
 		maxLength: 3,
 		avatars: avatarsGroupArrBuilder(),
 	},
+	argTypes: {
+		size: {
+			options: ['xs', 'sm', 'md', 'lg'],
+			control: {type: 'select'},
+		},
+	},
 } as ComponentMeta<typeof AvatarGroup>;
 
 const Template: ComponentStory<typeof AvatarGroup> = args => (
