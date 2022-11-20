@@ -1,4 +1,6 @@
 {
+	"include": ["src"],
+	"extends": "@tsconfig/react-native/tsconfig.json",
 	"compilerOptions": {
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
@@ -20,6 +22,5 @@
 			"@components/*": ["components/*"],
 			"@utils/*": ["utils/*"]
 		}
-	},
-	"include": ["src"]
+	}
 }

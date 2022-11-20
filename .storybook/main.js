@@ -2,14 +2,18 @@ const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-	stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+	stories: [
+		'../src/**/*.stories.mdx',
+		'../src/**/*.stories.@(js|jsx|ts|tsx)',
+		'../components/**/*.stories.?(ts|tsx|js|jsx)',
+	],
 	staticDirs: [path.resolve(__dirname, '../public')],
 	addons: [
 		'@storybook/addon-links',
 		'@storybook/addon-essentials',
 		'@storybook/addon-interactions',
 		'@storybook/addon-jest',
-		'@storybook/preset-create-react-app',
+		'@storybook/addon-react-native-web',
 	],
 	framework: '@storybook/react',
 	core: {
