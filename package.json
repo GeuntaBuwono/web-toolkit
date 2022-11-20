@@ -33,7 +33,7 @@
 		"format:lint": "eslint . --fix --quiet --ignore-path .gitignore",
 		"format:prettier": "prettier --config .prettierrc . --ignore-path .gitignore --write --loglevel silent",
 		"formatter": "yarn format:lint; yarn format:prettier",
-		"storybook": "start-storybook -p 6006 -s public",
+		"storybook": "start-storybook -p 6006",
 		"prebuild:storybook": "yarn test:generate-output",
 		"build:storybook": "build-storybook -c .storybook -o build/",
 		"predeploy": "yarn build:storybook",
@@ -98,7 +98,6 @@
 		"@storybook/addon-interactions": "^6.5.13",
 		"@storybook/addon-jest": "^6.5.13",
 		"@storybook/addon-links": "^6.5.13",
-		"@storybook/addon-postcss": "^2.0.0",
 		"@storybook/builder-webpack5": "^6.5.13",
 		"@storybook/manager-webpack5": "^6.5.13",
 		"@storybook/node-logger": "^6.5.13",
@@ -115,12 +114,16 @@
 		"husky": "^8.0.2",
 		"lint-staged": "^13.0.3",
 		"postcss": "^8.4.19",
+		"postcss-loader": "^7.0.1",
 		"prettier": "^2.7.1",
 		"prop-types": "^15.8.1",
 		"tailwindcss": "^3.2.4",
 		"ts-prune": "^0.10.3",
 		"tsconfig-paths-webpack-plugin": "^4.0.0",
 		"webpack": "^5.75.0"
+	},
+	"peerDependencies": {
+		"postcss": "^8.0.0"
 	},
 	"resolutions": {
 		"glob-parent": "5.1.2",

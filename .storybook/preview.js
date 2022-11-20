@@ -1,5 +1,6 @@
 import '!style-loader!css-loader!postcss-loader!tailwindcss/tailwind.css';
 import {withTests} from '@storybook/addon-jest';
+import 'tailwindcss/tailwind.css';
 import results from '../.jest-test-results.json';
 
 export const parameters = {
