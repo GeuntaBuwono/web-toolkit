@@ -1,4 +1,4 @@
-import AvatarGroup from '@components/AvatarGroup';
+import AvatarGroup, {AvatarItem} from '@components/AvatarGroup/AvatarGroup';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {faker} from '@faker-js/faker';
 

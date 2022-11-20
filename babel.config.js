@@ -1,12 +1,12 @@
 module.exports = {
 	presets: [
-		'@babel/preset-env',
+		'module:metro-react-native-babel-preset',
+		'@babel/preset-typescript',
 		[
 			'@babel/preset-react',
 			{
 				runtime: 'automatic',
 			},
 		],
-		'@babel/preset-typescript',
 	],
 };

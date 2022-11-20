@@ -1,5 +1,14 @@
 import getInitialName from '@utils/getInitialName';
 
+export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg';
+
+export type AvatarProps = {
+	name: string;
+	src?: string;
+	size?: AvatarSize;
+	alt?: string;
+};
+
 const avatarSizeMapper = ({size}: {size: AvatarSize}) => {
 	switch (size) {
 		case 'xs':
@@ -26,7 +35,7 @@ const avatarTextSizeMapper = ({size}: {size: AvatarSize}) => {
 	}
 };
 
-const Avatar = ({size = 'md', alt = '', src, name}: AvatarType) => {
+const Avatar = ({size = 'md', alt = '', src = '', name}: AvatarProps) => {
 	if (src) {
 		return (
 			<img
