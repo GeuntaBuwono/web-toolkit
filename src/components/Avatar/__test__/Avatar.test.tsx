@@ -1,4 +1,8 @@
-import Avatar from '@components/Avatar';
+/**
+ * @jest-environment jsdom
+ */
+
+import Avatar from '@components/Avatar/Avatar';
 import {render} from '@testing-library/react';
 
 const expectedTestValue = {

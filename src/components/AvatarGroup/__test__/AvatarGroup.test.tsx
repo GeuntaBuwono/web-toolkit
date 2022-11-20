@@ -1,7 +1,7 @@
 import {render} from '@testing-library/react';
-import AvatarGroup from '@components/AvatarGroup';
+import AvatarGroup, {AvatarGroupProps} from '../AvatarGroup';
 
-const testAvatarGroupProps: AvatarGroup = {
+const testAvatarGroupProps: AvatarGroupProps = {
 	maxLength: 3,
 	avatars: [
 		{
