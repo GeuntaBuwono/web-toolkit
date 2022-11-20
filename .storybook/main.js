@@ -13,6 +13,7 @@ module.exports = {
 		'@storybook/addon-essentials',
 		'@storybook/addon-interactions',
 		'@storybook/addon-jest',
+		'@storybook/preset-create-react-app',
 		'@storybook/addon-react-native-web',
 	],
 	framework: '@storybook/react',
